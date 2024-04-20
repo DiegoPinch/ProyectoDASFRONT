@@ -1,0 +1,31 @@
+/* You can add global styles to this file, and also import other style files */
+$gutter: 1rem;
+@import "assets/layout/styles/layout/layout.scss";
+
+
+@import "primeng/resources/themes/tailwind-light/theme.css";
+@import "primeng/resources/primeng.min.css";
+@import "primeicons/primeicons.css";
+
+@import "../node_modules/primeflex/primeflex.scss";
+
+/* Demos borrar 
+@import "assets/demo/styles/flags/flags.css";
+@import "assets/demo/styles/badges.scss";
+@import "assets/demo/styles/code.scss"; 
+
+*/
+
+/* 
+body{
+    font-family: var(--font-family);
+    margin: 0px;
+}
+
+
+Todos los botones tendrán un tamaño más pequeño
+.p-button {
+    font-size: 14px;
+    padding: 8px 16px;
+} 
+*/
