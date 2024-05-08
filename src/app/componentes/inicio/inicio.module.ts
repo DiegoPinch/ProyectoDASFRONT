@@ -6,7 +6,7 @@ import { InicioComponent } from './inicio.component';
 
 import { MenuModule } from 'primeng/menu';
 import { TableModule } from 'primeng/table';
-import { ProductService } from '../../core/service/product.service';
+import { TecnologicosService } from '../../core/service/tecnologicos.service';
 
 import { ButtonModule } from 'primeng/button';
 
@@ -25,7 +25,7 @@ import { ButtonModule } from 'primeng/button';
     InicioComponent
   ],
   providers: [
-    ProductService
+    TecnologicosService
   ],
 })
 export class InicioModule { }

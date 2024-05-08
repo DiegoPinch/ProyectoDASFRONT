@@ -1,6 +1,8 @@
 import { Component, ElementRef, ViewChild } from '@angular/core';
 import { MenuItem } from 'primeng/api';
 import { LayoutService } from '../service/app.layout.service';
+import { AuthService } from '../../services/auth.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-topbar',
@@ -8,7 +10,23 @@ import { LayoutService } from '../service/app.layout.service';
   styleUrl: './topbar.component.css'
 })
 export class TopbarComponent {
+  usuario: any;
+  isAdmin: boolean = false;
   items!: MenuItem[];
+
+  ngOnInit() {
+    this.usuario = 'AxelV'
+    this.isAdmin = this.authService.isUserAdmin();
+
+    this.items = [
+      {
+        label: this.usuario.usuario.toUpperCase(), icon: 'pi pi-user',
+        items: [
+          { label: 'Cerrar Sesión', icon: 'pi pi-sign-out', command: () => this.cerrarSesion() }
+        ]
+      },
+    ];
+  }
 
   @ViewChild('menubutton') menuButton!: ElementRef;
 
@@ -16,5 +34,10 @@ export class TopbarComponent {
 
   @ViewChild('topbarmenu') menu!: ElementRef;
 
-  constructor(public layoutService: LayoutService) { }
+  constructor(private route: Router,public layoutService: LayoutService, public authService: AuthService) { }
+
+  cerrarSesion(){
+    this.authService.removeUser();
+    this.route.navigate(['']);
+  }
 }

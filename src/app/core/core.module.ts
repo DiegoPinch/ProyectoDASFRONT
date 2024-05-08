@@ -8,7 +8,8 @@ import { LoginComponent } from './login/login.component';
 import { PrincipalComponent } from './principal/principal.component';
 import { SharedprimeModule } from '../sharedprime/sharedprime.module';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-
+import { ToastModule } from 'primeng/toast';
+import { MessageService } from 'primeng/api';
 
 
 
@@ -25,11 +26,14 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     SharedprimeModule,
     FormsModule,
     ReactiveFormsModule,
-
+    ToastModule
   ],
   exports: [
     PrincipalComponent,
-    FooterComponent,
+    FooterComponent
+  ],
+  providers:[
+    MessageService
   ]
 })
 export class CoreModule { }
