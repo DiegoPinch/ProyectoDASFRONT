@@ -20,7 +20,6 @@ import { HttpClientModule } from '@angular/common/http';
     BrowserAnimationsModule,
     PanelModule,
     HttpClientModule
-   
   ],
   providers: [
     provideClientHydration(),

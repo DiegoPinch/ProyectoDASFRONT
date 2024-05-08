@@ -10,12 +10,12 @@
 }
 
 .product-badge {
-    &.status-instock {
+    &.status-true {
         background: #C8E6C9;
         color: #256029;
     }
 
-    &.status-outofstock {
+    &.status-false {
         background: #FFCDD2;
         color: #C63737;
     }
@@ -59,7 +59,7 @@
 }
 
 .order-badge {
-    &.order-delivered {
+    &.order-operativo {
         background: #C8E6C9;
         color: #256029;
     }

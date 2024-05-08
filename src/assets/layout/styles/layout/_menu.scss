@@ -21,10 +21,10 @@
 
     .layout-root-menuitem {
         >.layout-menuitem-root-text {
-            font-size: .857rem;
+            font-size: 1rem;
             text-transform: uppercase;
             font-weight: 700;
-            color: var(--surface-900);
+            color: rgb(65, 65, 65);
             margin: .75rem 0;
         }
 
@@ -61,7 +61,7 @@
             align-items: center;
             position: relative;
             outline: 0 none;
-            color: var(--text-color);
+            color: rgb(80, 80, 80);
             cursor: pointer;
             padding: .75rem 1rem;
             border-radius: $borderRadius;
@@ -83,7 +83,7 @@
             }
 
             &:hover {
-                background-color: var(--surface-hover);
+                background-color: var(--surface-300);
             }
 
             &:focus {

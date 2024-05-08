@@ -12,21 +12,19 @@ import { RouterModule } from '@angular/router';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { SidebarModule } from 'primeng/sidebar';
 import { CoreModule } from '../core/core.module';
+import { MenubarModule } from 'primeng/menubar';
 
 
 @NgModule({
   declarations: [
-
     LayoutComponent, MenuComponent, TopbarComponent, AppMenuitemComponent, SidebarComponent
   ],
   imports: [
     CommonModule,
     PanelRoutingModule,
     SharedprimeModule,
-    CoreModule
-    //borrar
-    //RouterModule,
-    //SidebarModule
+    CoreModule,
+    MenubarModule
   ],
   exports: [
     LayoutComponent,
